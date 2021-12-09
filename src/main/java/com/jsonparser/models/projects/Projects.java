@@ -1,6 +1,5 @@
 package com.jsonparser.models.projects;
 
-import com.jsonparser.models.projects.child_projects.ChildProjects;
 import com.jsonparser.models.projects.common_models.report_files.ReportFiles;
 import com.jsonparser.models.projects.epics.Epics;
 import com.jsonparser.models.projects.root_causes.RootCauses;
@@ -11,7 +10,7 @@ public class Projects {
     private String name;
     private String releaseGroup;
     private List<ReportFiles> reportFiles;
-    private List<ChildProjects> childProjects;
+    private List<Projects> childProjects;
     private List<RootCauses> rootCauses;
     private List<Epics> epics;
 
@@ -39,11 +38,11 @@ public class Projects {
         this.reportFiles = reportFiles;
     }
 
-    public List<ChildProjects> getChildProjects() {
+    public List<Projects> getChildProjects() {
         return childProjects;
     }
 
-    public void setChildProjects(List<ChildProjects> childProjects) {
+    public void setChildProjects(List<Projects> childProjects) {
         this.childProjects = childProjects;
     }
 
