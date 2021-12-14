@@ -12,7 +12,7 @@ public class SettingsGsonParser {
     private Gson gson;
         public SettingsGsonParser() {
             gson = new Gson();
-            try(FileReader reader = new FileReader("src/main/java/com/jsonparser/settings_json/settings.json")) {
+            try(FileReader reader = new FileReader("settings.json")) {
                this.settings = gson.fromJson(reader,Settings.class);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
